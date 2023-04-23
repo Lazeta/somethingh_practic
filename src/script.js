@@ -84,7 +84,10 @@ const myTable = {
             monitor: 'PHILIPS 227E led',
             headphones: 'defender'
         },
-        organizer: [
+        organizer: {
+            color: 'white',
+            size: 60(mm),
+            things: [
             {
                 id: 1,
                 title: 'pen',
@@ -110,9 +113,7 @@ const myTable = {
                 title: 'construction knife',
                 color: 'blue'
             },
-        ],
-        color: 'white',
-        size: 60(mm),
+        ]},
     },
 }
 
