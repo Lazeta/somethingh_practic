@@ -129,30 +129,3 @@ const myTable = {
 // console.log(object.technologies_obj[2*2])
 // console.log(object.technologies_obj[6].id)
 // console.log(object.technologies_obj[6].title)
-
-
-// const nearestSq = (n) => {
-//     let root = Math.floor(Math.sqrt(n));
-//     let lowerSq = root ** 2
-//     let upperSq = (root + 1) ** 2
-//     if(root ** 2 === n) return n;
-//     else {
-//         if(lowerSq <= upperSq){
-//             return lowerSq;
-//         } 
-//         else return upperSq
-//     } 
-// }
-
-// console.log(nearestSq(1))
-// console.log(nearestSq(3))
-// console.log(nearestSq(4))
-// console.log(nearestSq(5))
-// console.log(nearestSq(7))
-// console.log(nearestSq(8))
-// console.log(nearestSq(9))
-
-// let birthday = new Date(2020, 11, 20);
-// let copy = new Date();
-// // console.log(copy.getTime())
-// console.log(birthday)
