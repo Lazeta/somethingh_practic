@@ -53,19 +53,68 @@ const myTable = {
     cost: 250,
     things: {
         PC: {
-            title: 'TUF GAMING',
+            title: 'CASE POWERCASE',
             isProcessor: true,
             processor: 'AMD Ryzen 7 5700G with Radeon Graphics',
             processorPower: 4.30(GHz),
+            isVideoCard: false,
+            videoCard: '',
             iSOperativeMemory: true,
+            nameOZU: 'Fury 16GB',
             OperativeMemory: 16.0(GB),
             typeSistem: 'operating sistem',
             bitSistem: 64(Bit),
-            
-        }
-    }
+            isMotherboard: true,
+            Motherboard: 'TUF Gaming Pro 2',
+            isPowerUnit: true,
+            powerUnit: 'be quete 550W',
+            isSSD: true,
+            SSD: 'Samsung 980 PRO',
+            isHDD: true,
+            HDD: 'Baracuda 1TB',
+            isProcessorCuller: true,
+            processorCuller: 'Aigo Towering',
+            isCullerHub: true,
+            cullerHub: 'Power Case HUB',
+            numberOfCullers: 6,
+            isMusicColumn: true,
+            Model: 'A511',
+            keyboard: 'defender MaYhem',
+            mouse: 'defender shock',
+            monitor: 'PHILIPS 227E led',
+            headphones: 'defender'
+        },
+        organizer: [
+            {
+                id: 1,
+                title: 'pen',
+                color: 'blue'
+            },
+            {
+                id: 2,
+                title: 'pen 2',
+                color: 'blue'
+            },
+            {
+                id: 3,
+                title: 'pen 3',
+                color: 'black'
+            },
+            {
+                id: 4,
+                title: 'comb',
+                color: 'white'
+            },
+            {
+                id: 5,
+                title: 'construction knife',
+                color: 'blue'
+            },
+        ],
+        color: 'white',
+        size: 60(mm),
+    },
 }
-
 
 
 // console.log(object['name 2'])
