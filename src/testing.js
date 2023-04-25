@@ -68,13 +68,82 @@
 // // console.log(new_fill)
 
 
-const data = ({1: 'a', 2: 'b', 3: 'c'}) // [['1', '2', '3'], ['a', 'b', 'c']];
-function keysAndValues(data){
-    const result = [Object.keys(data), Object.values(data)];
-    return result
+// const data = ({1: 'a', 2: 'b', 3: 'c'}) // [['1', '2', '3'], ['a', 'b', 'c']];
+// function keysAndValues(data){
+//     const result = [Object.keys(data), Object.values(data)];
+//     return result
+// }
+// console.log(keysAndValues({1: 'a', 2: 'b', 3: 'c'}))
+// console.log(keysAndValues({'A': 1, 'B': 2, 'C': 3}))
+// console.log(keysAndValues({}))
+// console.log(keysAndValues({'': ''}))
+// console.log(keysAndValues({" ": 1}))
+
+// 1. Создание объекта и присвоение ему значений
+const person = {
+    name: 'Alex',
+    id: 10
 }
-console.log(keysAndValues({1: 'a', 2: 'b', 3: 'c'}))
-console.log(keysAndValues({'A': 1, 'B': 2, 'C': 3}))
-console.log(keysAndValues({}))
-console.log(keysAndValues({'': ''}))
-console.log(keysAndValues({" ": 1}))
+// console.log(person)
+
+// 2. Создание копии объекта без мутации. 
+// вызов новой переменной которую мы изменили на основе ссылки 
+// на оригинал после вызываем и сам оригинал 
+const person2 = Object.assign({
+    name: 'Alex',
+    id: 10
+})
+const newPerson2 = Object.assign({}, person2, {
+    email: 'wdb@gmail.com'
+})
+// console.log(newPerson2)
+// console.log(person2)
+
+// 3. Определили объект, и переназначили значение ключа объекта изменив оригинал
+const person3 = Object.assign({
+    name: 'Alex',
+    id: 10,
+    email: 'wdb@gmail.com'
+});
+
+Object.assign(person3, {
+    email: 'newWebDevblog@gmail.com'
+})
+// console.log(person3)
+
+// 4. Вывели новый объект с добавленым ключём и значением.
+const person4 = {
+    name: 'Alex',
+    id: 10
+}
+const newPrsn = {
+    ...person4,
+    address: 'USA, New York'
+}
+// console.log(person4)
+// console.log(newPrsn)
+
+// 5. Получаем массив со всеми ключами
+// Получаем массив со всеми значениями
+// console.log(Object.keys(newPrsn))
+// console.log(Object.values(newPrsn))
+
+
+// 6. Object.entries получаем многомерный массив объекта
+// console.log(Object.entries(person3))
+
+// 7. Object.freeze замораживает объект и свойства не могут быть удалены или изменены.
+// Object.freeze(person3)
+// person3.name = 'Ivanko';
+// console.log(person3.name)
+
+// 8. Object.seal предотвращает новых свойств к объекту, но допускает изменение существующих свойств
+Object.seal(person3)
+person3.name = 'Ivanko';
+// console.log(person3)
+// console.log(person3.name)
+
+
+const newPrsn2 = Object.assign(person4);
+const isEqual = Object.is(person4, newPrsn)
+// console.log(isEqual)
