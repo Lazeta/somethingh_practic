@@ -46,10 +46,10 @@ const object = {
         title: 'Webpack'
     } ],
 }
-console.log(object.technologies[2])
-console.log(object.technologies_obj[2*2])
-console.log(object.technologies_obj[6].id)
-console.log(object.technologies_obj[6].title)
+// console.log(object.technologies[2])
+// console.log(object.technologies_obj[2*2])
+// console.log(object.technologies_obj[6].id)
+// console.log(object.technologies_obj[6].title)
 
 const myTable = {
     name: 'computer table',
