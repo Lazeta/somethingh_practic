@@ -48,3 +48,57 @@ if (isMobile.any()) {
 } else {
     document.body.classList.add('_pc');
 }
+
+// прокрутка при клике
+
+let menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+if (menuLinks.length > 0) {
+    menuLinks.forEach(menuLink => {
+        menuLink.addEventListener("click", onMenuLinkClick);
+    });
+    function onMenuLinkClick(e) {
+        const menuLink = e.target;
+        if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
+            const gotoBlock = document.querySelector(menuLink, dataSet.goto);
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document. querySelector('header').offsetHeight;
+
+            window.scrollTo({
+                // top: gotoBlockBValue.
+                // behavior: "smooth";
+            });
+        }
+    }
+}
+
+
+
+
+
+
+
+// document.querySelector('#submit').onclick = function(){
+//     alert('Вы нажали ЛКМ!');
+// }
+
+
+// // создаём функцию которая срабатываем по вызову её в теге html.
+// {/* <button type="submit" id="submit" onclick = "clickSubmit()">Кнопка!</button> */}
+// function clickSubmit(){
+//     alert('Вы нажали Левую Кнопку Мыши');
+// }
+// {/* <button type="submit" id="submit" oncontectmenu = "clickSubmit2()">Кнопка!</button> */}
+// function clickSubmit2(){
+//     alert('Вы нажали Правую Кнопку Мыши');
+// }
+
+// function randomSum(min, max){ 
+//     // формула вывода случайного числа в диапозоне min - max в форме абсолютного числа.
+//     document.querySelector('.sum').innerHTML = Math.abs(Math.floor(Math.random() * (min - max + 1) ) + min);
+// }
+
+// document.querySelector('#submit2').oncontextmenu = function(){
+//     // alert('сработал скрипт рандомного числа в диапазоне');
+//     randomSum(1000, 9999);
+//     // чтобы наша функция остановилась мы возвращаем false, в ином случае у нас по нажатию ПКМ откроется меню настроек.
+//     return false;
+// }
