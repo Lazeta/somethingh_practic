@@ -31,6 +31,20 @@ const isMobile = {
 // добавляем класс в зависимости от того какое у нас система
 if (isMobile.any()) {
     document.body.classList.add('_touch');
+    
+    let menuArrows = document.querySelectorAll('.menu__arrow');
+    if(menuArrows.length > 0) {
+        for (let index = 0; index < menuArrows.length; index++) {
+            const menuArrow = menuArrows[index];
+            // навесить на обработчик кликер и выполнить функцию
+            menuArrow.addEventListener("click", function(e) {
+                // создать у елемента новый класс _active и затем удалить его
+                menuArrow.parentElement.classList.toggle('_active');
+            });
+            
+        }
+    }
+
 } else {
     document.body.classList.add('_pc');
 }
