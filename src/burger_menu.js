@@ -82,12 +82,12 @@ if (menuLinks.length > 0) {
 
 
 // // создаём функцию которая срабатываем по вызову её в теге html.
-// {/* <button type="submit" id="submit" onclick = "clickSubmit()">Кнопка!</button> */}
-// function clickSubmit(){
+// {/* <button type="submit" id="submit" onclick = "alerted()">Кнопка!</button> */}
+// function alerted(){
 //     alert('Вы нажали Левую Кнопку Мыши');
 // }
-// {/* <button type="submit" id="submit" oncontectmenu = "clickSubmit2()">Кнопка!</button> */}
-// function clickSubmit2(){
+// {/* <button type="submit" id="submit" oncontectmenu = "alerted2()">Кнопка!</button> */}
+// function alerted2(){
 //     alert('Вы нажали Правую Кнопку Мыши');
 // }
 
