@@ -1,5 +1,7 @@
 "use strict"
 
+// const { isTemplateExpression } = require("typescript");
+
 // функция возвращает результат , где мы получаем устройство с которого запущен сайт
 const isMobile = {
     Android: function () {
@@ -41,7 +43,6 @@ if (isMobile.any()) {
                 // создать у елемента новый класс _active и затем удалить его
                 menuArrow.parentElement.classList.toggle('_active');
             });
-            
         }
     }
 
@@ -49,23 +50,41 @@ if (isMobile.any()) {
     document.body.classList.add('_pc');
 }
 
-// прокрутка при клике
+// Меню бургер
+const iconMenu = document.querySelector('.menu__icon');
+const menuBody = document.querySelector('.menu__body');
+if (iconMenu){
+    iconMenu.addEventListener("click", function(e) {
+        document.body.classList.toggle('_lock');
+        iconMenu.classList.toggle('_active');
+        menuBody.classList.toggle('_active');
+    });
+}
 
-let menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+// прокрутка при клике
+const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if (menuLinks.length > 0) {
     menuLinks.forEach(menuLink => {
         menuLink.addEventListener("click", onMenuLinkClick);
     });
+
     function onMenuLinkClick(e) {
         const menuLink = e.target;
-        if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
-            const gotoBlock = document.querySelector(menuLink, dataSet.goto);
-            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document. querySelector('header').offsetHeight;
+        if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+            const gotoBlock = document.querySelector(menuLink.dataset.goto);
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
+
+            if (iconMenu.classList.contains('_active')) {
+                document.body.classList.remove('_lock');
+                iconMenu.classList.remove('_active');
+                menuBody.classList.remove('_active');
+            }
 
             window.scrollTo({
-                // top: gotoBlockBValue.
-                // behavior: "smooth";
+                top: gotoBlockBValue,
+                behavior: "smooth"
             });
+            e.preventDefault();
         }
     }
 }
@@ -76,10 +95,14 @@ if (menuLinks.length > 0) {
 
 
 
+
+
+
+
+// классический способ по айди нашей кнопку выполнить функцию по нажатию ЛКМ.
 // document.querySelector('#submit').onclick = function(){
 //     alert('Вы нажали ЛКМ!');
 // }
-
 
 // // создаём функцию которая срабатываем по вызову её в теге html.
 // {/* <button type="submit" id="submit" onclick = "alerted()">Кнопка!</button> */}
@@ -91,13 +114,13 @@ if (menuLinks.length > 0) {
 //     alert('Вы нажали Правую Кнопку Мыши');
 // }
 
+// // формула вывода случайного числа в диапозоне min - max в форме абсолютного числа.
 // function randomSum(min, max){ 
-//     // формула вывода случайного числа в диапозоне min - max в форме абсолютного числа.
 //     document.querySelector('.sum').innerHTML = Math.abs(Math.floor(Math.random() * (min - max + 1) ) + min);
 // }
 
+// // alert('сработал скрипт рандомного числа в диапазоне');
 // document.querySelector('#submit2').oncontextmenu = function(){
-//     // alert('сработал скрипт рандомного числа в диапазоне');
 //     randomSum(1000, 9999);
 //     // чтобы наша функция остановилась мы возвращаем false, в ином случае у нас по нажатию ПКМ откроется меню настроек.
 //     return false;
