@@ -51,13 +51,11 @@ if (isMobile.any()) {
 // Меню бургер
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
-if (iconMenu){
     iconMenu.addEventListener("click", function(e) {
         document.body.classList.toggle('_lock');
         iconMenu.classList.toggle('_active');
         menuBody.classList.toggle('_active');
-    });
-}
+});
 
 // прокрутка при клике
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
@@ -86,6 +84,10 @@ if (menuLinks.length > 0) {
         }
     }
 }
+
+// Баг 1
+// скрол в режиме всплывающего окна заходит за грани страницы вместе с 
+// шапкой заднего фона, логотип и иконка бургера остаются на месте.
 
 
 

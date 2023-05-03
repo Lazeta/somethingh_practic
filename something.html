@@ -6,48 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="/src/style/style.css"> 
-    <!-- <style>
-        .creature { 
-         width:  200px;
-         height: 200px;
-         border-radius: 50%;
-         background: #3ac;
-         position: relative;
-        }
-        .creature::before, .creature::after {
-         content: '';
-         position: absolute;
-         width: 30px;
-         height: 40px;
-         border-radius: 50%;
-         background: #000;
-         top: 40px;
-         animation: eye 3s ease-in-out infinite;
-        }
-        .creature::before { left: 55px; }
-        .creature::after { right: 55px; }
-        @keyframes eye {
-         90% { transform: none; }   
-         95% { transform: scaleY(0.1); }
-        }
-    </style> -->
 </head>
 <body>
     <div class="wrapper">
         <header class="header">
             <div class="header__container">
                 <a href="#" class="header__logo"></a>
-                <div class="header__menu menu">
-                    <!-- <button type="submit" id="submit2" onclick = "alerted2()" oncontextmenu = "alerted2()">Кнопка!</button>
-                    <div class="sum"></div> -->
-                    <div class="menu__icon">
-                        <span></span>
-                    </div>
+                <div class="header__menu">
                     <nav class="menu__body">
                         <ul class="menu__list">
-                            <li><a data-goto=".page__section_1" href="#" class="menu__link">Раздел №1</a></li>
-                            <li><a data-goto=".page__section_2" href="#" class="menu__link">Раздел №2</a></li>
-                            <li><a data-goto=".page__section_3" href="#" class="menu__link">Раздел №3</a></li>
+                            <li><a data-goto="page__section_1" href="#" class="menu__link">Раздел №1</a></li>
+                            <li><a data-goto="page__section_2" href="#" class="menu__link">Раздел №2</a></li>
+                            <li><a data-goto="page__section_3" href="#" class="menu__link">Раздел №3</a></li>
                             <li>
                                 <a href="#" class="menu__link">Страница №1</a>
                                 <span class="menu__arrow"></span>
@@ -68,6 +38,9 @@
                             </li>
                         </ul>
                     </nav>
+                    <div class="menu__icon">
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -107,7 +80,52 @@
             </section>
         </main>
     </div>
-    <!-- <div class="block_1">
+    <!-- <script src="./src/script.js"></script> -->
+    <!-- <script src="/src/study.js"></script> -->
+    <script src="/src/burger_menu.js"></script>
+    <!-- <script src="./src/types.ts"></script> -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <style>
+        .creature { 
+         width:  200px;
+         height: 200px;
+         border-radius: 50%;
+         background: #3ac;
+         position: relative;
+        }
+        .creature::before, .creature::after {
+         content: '';
+         position: absolute;
+         width: 30px;
+         height: 40px;
+         border-radius: 50%;
+         background: #000;
+         top: 40px;
+         animation: eye 3s ease-in-out infinite;
+        }
+        .creature::before { left: 55px; }
+        .creature::after { right: 55px; }
+        @keyframes eye {
+         90% { transform: none; }   
+         95% { transform: scaleY(0.1); }
+        }
+    </style> -->
+
+        <!-- <div class="block_1">
         <span>text text text text text text text text text text text text text text text text</span>
     </div>
     <div class="block_2">
@@ -135,9 +153,8 @@
     В браузере Google Chrome по умолчанию, родительский элемент имеет свойство {font-size: 2rem;}, 
     а дочерний элемент {font-size: 200%;}. 
     Каков будет размер шрифта у дочернего элемента в пикселях? -->
-    <!-- <script src="./src/script.js"></script> -->
-    <!-- <script src="/src/study.js"></script> -->
-    <script src="/src/burger_menu.js"></script>
-    <!-- <script src="./src/types.ts"></script> -->
-</body>
-</html>
+
+
+
+                        <!-- <button type="submit" id="submit2" onclick = "alerted2()" oncontextmenu = "alerted2()">Кнопка!</button>
+                    <div class="sum"></div> -->
