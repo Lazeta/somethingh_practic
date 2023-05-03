@@ -1,5 +1,3 @@
-"use strict"
-
 // const { isTemplateExpression } = require("typescript");
 
 // функция возвращает результат , где мы получаем устройство с которого запущен сайт
