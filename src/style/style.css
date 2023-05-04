@@ -60,12 +60,12 @@ a {
 }
 .header {
     /* наш бургер будет фиксированно ездить */
-    position: fixed;
+    position: relative;
+    z-index: 10;
+    background-color: #912105;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
-    background-color: #912105;
 }
 .header__container {
     max-width: 1200px;
@@ -177,8 +177,17 @@ body._touch .menu__list > li._active .menu__arrow {
     }
 }
 @media (max-width: 768px){
+    .header {
+        /* наш бургер будет фиксированно ездить */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: #912105;
+    }
     .menu__icon {
-        z-index: 50;
+        z-index: 5;
         display: block;
         position: relative;
         width: 30px;
@@ -241,10 +250,11 @@ body._touch .menu__list > li._active .menu__arrow {
     }
     .menu__body._active {
         /* данная реализация через трансформ багает плашку скрола */
-        transform: translate(0px, 0px);
+        z-index: 3;
         left: 0;
     }
     /* плевдоплашка против налезания выпливающего модульного окна на шапку */
+    /* именно тут задан приоритет слоя z-index: 10 */
     .menu__body::before {
         content: "";
         position: fixed;
@@ -253,7 +263,7 @@ body._touch .menu__list > li._active .menu__arrow {
         left: 0;
         height: 70px;
         background-color: #912105;
-        z-index: 0;
+        z-index: 10;
     }
     .menu__list > li {
         flex-wrap: wrap;
