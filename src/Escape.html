@@ -41,12 +41,14 @@
             popup.classList.remove('__show');
         });
 
+        // при нажатии на Escape можно скрыть меню
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' || e.key === 'Esc') {
                 popup.classList.remove('__show');
             }
         });
 
+        // будем скрывать меню если кликать вне списка за его пределами.
         document.addEventListener('click', function(e) {
             if (!popup.contains(e.target) && !openPopupButton.contains(e.target)) {
                 popup.classList.remove('__show')
