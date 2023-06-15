@@ -1,0 +1,36 @@
+body {
+    width: 100%;
+    
+}
+
+.block {
+    width: 80%;
+}
+
+/* button changed background color */
+.change__button {
+    position: absolute;
+    width: 65px;
+    right: 160px;
+    top: 50px;
+    color: darkred;
+    border-color:#636060;
+    border-radius: 10px;
+    border-style:double;
+}
+
+.change__button {
+    display: none;
+}
+
+@media (max-width: 1900px){
+    .change__button {
+        position: absolute;
+        right: 10px;
+    }
+}
+@media (max-width: 1614px){
+    .change__button {
+        display: none;
+    }
+}
