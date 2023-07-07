@@ -98,6 +98,7 @@ maxTriSum([-2,-4,0,-9,2])                   // 0
 maxTriSum([-5,-1,-9,0,2])                   // 1
 */
 
+/*
 function nbDig(n, d) {
   let count = 0
   for(let i = 0; i <= n; i++){
@@ -114,3 +115,18 @@ function nbDig(n, d) {
 console.log(nbDig(10, 1)); // 4
 console.log(nbDig(25, 0)); // 11
 console.log(nbDig(5750, 0)); // 4700
+*/
+
+function minSum(arr) {
+  const descending = arr.slice().sort((a, b) => b - a); // sorted array only clone array 'slice()' 
+  const ascending = arr.slice().sort((a, b) => a - b); // beacause method sort will take array and changed him.
+  let sum = 0;
+  for(let i = 0; i < arr.length / 2; i++){ // cycle which iteration only half of the array
+    sum += descending[i] * ascending[i]    // add sum by index first big digit and small digit and next iteration also sum 
+  }
+  console.log(sum)
+}
+
+minSum([5,4,2,3])         // 22
+minSum([12,6,10,26,3,24]) // 342
+minSum([9,2,8,7,5,4,0,6]) // 74
