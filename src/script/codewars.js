@@ -71,6 +71,7 @@ killer(
 //   "Megan";
 */
 
+/*
 function maxTriSum(numbers){
     let arr = numbers.toSorted((a, b) => b - a) // descending sort
     let set = new Set(arr) // tuple of unique numbers
@@ -95,3 +96,21 @@ maxTriSum([-7,12,-7,29,-5,0,-7,0,0,29])     // 41
 maxTriSum([-2,0,2])                         // 0
 maxTriSum([-2,-4,0,-9,2])                   // 0
 maxTriSum([-5,-1,-9,0,2])                   // 1
+*/
+
+function nbDig(n, d) {
+  let count = 0
+  for(let i = 0; i <= n; i++){
+    let square = (i * i).toString();
+    for(let j = 0; j < square.length; j++){
+      if(square[j] == d.toString()) {
+        count++;
+      }
+    }
+  }
+  return count
+}
+
+console.log(nbDig(10, 1)); // 4
+console.log(nbDig(25, 0)); // 11
+console.log(nbDig(5750, 0)); // 4700
