@@ -128,7 +128,7 @@ minSum([5,4,2,3])         // 22
 minSum([12,6,10,26,3,24]) // 342
 minSum([9,2,8,7,5,4,0,6]) // 74
 */
-
+/*
 function isPowerOfTwo(n) {
   if (n === 0) console.log(false)
   else console.log((n & (n - 1)) === 0)
@@ -142,5 +142,22 @@ isPowerOfTwo(234), false
 isPowerOfTwo(333), false
 isPowerOfTwo(1024), true
 isPowerOfTwo(4096), true
+*/
 
-
+function nicknameGenerator(name){
+  const vowels = 'aeiou';
+  if (name.length < 4) return "Error: Name too short";
+  else if(!vowels.includes(name[2])){
+    return name.substring(0, 3);
+  } else return name.substring(0, 4);
+}
+nicknameGenerator("Jimmy"), "Jim"
+nicknameGenerator("Samantha"), "Sam"
+nicknameGenerator("Sam"), "Error: Name too short"
+nicknameGenerator("Kayne"), "Kay", "'y' is not a vowel"
+nicknameGenerator("Melissa"), "Mel"
+nicknameGenerator("James"), "Jam"
+nicknameGenerator("Greg"), "Greg"
+nicknameGenerator("Jean"), "Jean"
+nicknameGenerator("Saam"), "Saam"
+nicknameGenerator("Hlewwrczfd"), "Hlew"
