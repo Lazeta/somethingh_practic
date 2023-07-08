@@ -45,31 +45,6 @@ getDecimal(true);
 getDecimal(NaN);
 getDecimal(0); */
 /*
-function killer(suspectInfo, dead) {
-    console.log(dead.value)
-}
-
-killer(
-  {
-    James: ["Jacob", "Bill", "Lucas"],
-    Johnny: ["David", "Kyle", "Lucas"],
-    Peter: ["Lucy", "Kyle"],
-  },
-  ["Lucas", "Bill"]
-)
-//   "James";
-
-killer(
-  {
-    Brad: [],
-    Megan: ["Ben", "Kevin"],
-    Finn: [],
-  },
-  ["Ben"]
-)
-//   "Megan";
-*/
-/*
 function maxTriSum(numbers){
     let arr = numbers.toSorted((a, b) => b - a) // descending sort
     let set = new Set(arr) // tuple of unique numbers
@@ -162,7 +137,7 @@ nicknameGenerator("Jean"), "Jean"
 nicknameGenerator("Saam"), "Saam"
 nicknameGenerator("Hlewwrczfd"), "Hlew"
 */
-
+/*
 function sortMyString(S) {
   const separated = [...S];
   let evenChar = '';
@@ -180,3 +155,68 @@ function sortMyString(S) {
 
 sortMyString("CodeWars"), "CdWr oeas"
 sortMyString("YCOLUE'VREER"), "YOU'RE CLEVER"
+*/
+/*
+function vowelOne(s){
+  let res = '';
+  const vowels = "aAeEuUiIoO";
+  for(let i = 0; i < s.length; i++){
+    vowels.includes(s[i]) ? res += '1' : res += '0';
+  }
+  return res
+}
+
+// function vowelOne(s) {
+//   const vowels = 'aoeyuiAOEYUI';
+//   let result = '';
+//   for (let i = 0; i < s.length; i++) {
+//     let isVowel = false;
+//     for (let j = 0; j < vowels.length; j++) {
+//       if (s[i] === vowels[j]) {
+//         isVowel = true;
+//         break;
+//       }
+//     }
+//     if (isVowel) {
+//       result += '1';
+//     } else {
+//       result += '0';
+//     }
+//   }
+//   return result;
+// }
+
+vowelOne( `vowelOne` ), "01010101"
+vowelOne( `123, arou` ), "000001011"
+vowelOne( `aUAv7t%<UOeoi;OUiUOUaiD|aIxOU` ), '11100000111100110111100010011'
+vowelOne( `OmiEeGuAOhEeYoUAoeZiE0AsoAi` ), "100110111011111111001010110"
+vowelOne( `eOyr0yo#"Ka\DiUuI?_iJeO{fO^oO` ), "11100110001000110000011001011"
+vowelOne( 'aaFAi u|MoUfQs`tUvkj@lhAEbgiam' ), "110100100110000010000001100010"
+*/
+
+
+/*
+function killer(suspectInfo, dead) {
+    console.log(dead.value)
+}
+
+killer(
+  {
+    James: ["Jacob", "Bill", "Lucas"],
+    Johnny: ["David", "Kyle", "Lucas"],
+    Peter: ["Lucy", "Kyle"],
+  },
+  ["Lucas", "Bill"]
+)
+//   "James";
+
+killer(
+  {
+    Brad: [],
+    Megan: ["Ben", "Kevin"],
+    Finn: [],
+  },
+  ["Ben"]
+)
+//   "Megan";
+*/
