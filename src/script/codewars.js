@@ -44,7 +44,6 @@ getDecimal(Infinity);
 getDecimal(true);
 getDecimal(NaN);
 getDecimal(0); */
-
 /*
 function killer(suspectInfo, dead) {
     console.log(dead.value)
@@ -70,7 +69,6 @@ killer(
 )
 //   "Megan";
 */
-
 /*
 function maxTriSum(numbers){
     let arr = numbers.toSorted((a, b) => b - a) // descending sort
@@ -97,7 +95,6 @@ maxTriSum([-2,0,2])                         // 0
 maxTriSum([-2,-4,0,-9,2])                   // 0
 maxTriSum([-5,-1,-9,0,2])                   // 1
 */
-
 /*
 function nbDig(n, d) {
   let count = 0
@@ -116,7 +113,7 @@ console.log(nbDig(10, 1)); // 4
 console.log(nbDig(25, 0)); // 11
 console.log(nbDig(5750, 0)); // 4700
 */
-
+/*
 function minSum(arr) {
   const descending = arr.slice().sort((a, b) => b - a); // sorted array only clone array 'slice()' 
   const ascending = arr.slice().sort((a, b) => a - b); // beacause method sort will take array and changed him.
@@ -130,3 +127,20 @@ function minSum(arr) {
 minSum([5,4,2,3])         // 22
 minSum([12,6,10,26,3,24]) // 342
 minSum([9,2,8,7,5,4,0,6]) // 74
+*/
+
+function isPowerOfTwo(n) {
+  if (n === 0) console.log(false)
+  else console.log((n & (n - 1)) === 0)
+}
+
+isPowerOfTwo(0), false
+isPowerOfTwo(1), true
+isPowerOfTwo(2), true
+isPowerOfTwo(5), false
+isPowerOfTwo(234), false
+isPowerOfTwo(333), false
+isPowerOfTwo(1024), true
+isPowerOfTwo(4096), true
+
+
