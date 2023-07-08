@@ -143,7 +143,7 @@ isPowerOfTwo(333), false
 isPowerOfTwo(1024), true
 isPowerOfTwo(4096), true
 */
-
+/*
 function nicknameGenerator(name){
   const vowels = 'aeiou';
   if (name.length < 4) return "Error: Name too short";
@@ -161,3 +161,22 @@ nicknameGenerator("Greg"), "Greg"
 nicknameGenerator("Jean"), "Jean"
 nicknameGenerator("Saam"), "Saam"
 nicknameGenerator("Hlewwrczfd"), "Hlew"
+*/
+
+function sortMyString(S) {
+  const separated = [...S];
+  let evenChar = '';
+  let oddChar = '';
+  for(let i = 0; i < separated.length; i++){
+    if(i % 2 !== 1){
+      evenChar += separated[i]
+    } else {
+      oddChar += separated[i];
+    }
+  }
+  console.log(separated)
+  console.log(`${evenChar} ${oddChar}`)
+}
+
+sortMyString("CodeWars"), "CdWr oeas"
+sortMyString("YCOLUE'VREER"), "YOU'RE CLEVER"
