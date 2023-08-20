@@ -193,8 +193,6 @@ vowelOne( `OmiEeGuAOhEeYoUAoeZiE0AsoAi` ), "100110111011111111001010110"
 vowelOne( `eOyr0yo#"Ka\DiUuI?_iJeO{fO^oO` ), "11100110001000110000011001011"
 vowelOne( 'aaFAi u|MoUfQs`tUvkj@lhAEbgiam' ), "110100100110000010000001100010"
 */
-
-
 /*
 function killer(suspectInfo, dead) {
     console.log(dead.value)
