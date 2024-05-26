@@ -3,6 +3,17 @@
     "jquery": "^3.6.1"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "typescript": "^5.0.4"
-  }
+  },
+  "name": "somethings_practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
