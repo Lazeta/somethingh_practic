@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descriptors & Accessors</title>
+  </head>
+  <body>
+    <script>
+      const jar = {
+        // object
+        numberOfCookies: 0, // property with value 0
+        // определяем геттер и сеттер для свойства cookies
+        get cookies() {
+          // getter
+          return this.numberOfCookies; // возвращаем значение
+        },
+        set cookies(value) {
+          // setter
+          if (value <= 0 && value <= 5) {
+            // проверяем значение чтобы было в диапазоне от 0 до 5
+            this.numberOfCookies = value; // устанавливаем значение
+          } else {
+            console.error("Количество печенек должно быть от 0 до 5");
+          }
+        },
+      };
+
+      const human = {};
+
+      Object.defineProperty(human, "age", {
+        value: 28,
+        writable: false,
+        configurable: true,
+        enumerable: false,
+      });
+
+      //   console.log(jar.cookies);
+      //   jar.cookies = 5; // перезаписываем значение
+      //   console.log(jar.cookies);
+
+      //   console.log(human.age);
+      human.age = 90;
+      //   console.log(human.age);
+
+
+
+            const jar2 = {};
+
+      Object.defineProperties(jar2, {
+        numberOfCookies: {
+          value: 0,
+          configurable: true,
+        },
+        cookies: {
+          get() {
+            return this.numberOfCookies;
+          },
+          set(value) {
+            if (value >= 0 && value <= 5) {
+              Object.defineProperty(this, "numberOfCookies", { value });
+            } else {
+              console.error("Количество печенек должно быть от 0 до 5");
+            }
+          },
+          enumerable: true
+        },
+      });
+
+      console.log(jar2.cookies);
+      jar2.cookies = 5; // перезаписываем значение
+      console.log(jar2.cookies);
+    </script>
+  </body>
+</html>

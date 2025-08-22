@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling</title>
+  </head>
+  <body>
+    <!-- <button type="button" id="myButton">Click me</button>
+    <button type="button" id="myButton2">Remove me</button> -->
+    <div class="box-1" style="background-color: red; padding: 30px 50px; border-radius: 10px; border: 2px solid black;">
+      box-1
+      <div class="box-2" style="background-color: blue; padding: 30px 50px; border-radius: 10px; border: 2px solid black;">
+        box-2
+        <div class="box-3" style="background-color: green; padding: 30px; border: 2px solid black; border-radius: 10px;">
+            box-3
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const box1 = document.querySelector(".box-1");
+      const box2 = document.querySelector(".box-2");
+      const box3 = document.querySelector(".box-3");
+
+      box1.addEventListener("click", function() {
+        console.log("box-1", );
+        event.stopImmediatePropagation();
+      });
+      box2.addEventListener("click", function() {
+        console.log("box-2", );
+        event.stopPropagation();
+      });
+      box3.addEventListener("click", function() {
+        console.log("box-3", );
+        event.stopPropagation();
+      }, true );
+
+      //   const Button = document.getElementById("myButton");
+      //   const Button2 = document.getElementById("myButton2");
+
+      //   const logMessage = () => {
+      //     console.log(1);
+      //   };
+
+      //   Button.addEventListener("click", (event) => {
+      //     console.log(event)
+      //   });
+
+      //   Button2.addEventListener('click', () => {
+      //     Button.removeEventListener("click", logMessage);
+      //   })
+    </script>
+  </body>
+</html>
