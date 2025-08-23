@@ -8,6 +8,26 @@
     <div id="app"></div>
 
     <script src="/my-ts-project.26d83309.js"></script>
+
+    <div class="product-list">
+      <h2>Список продуктов</h2>
+
+      <!-- Индикатор загрузки -->
+      <div *ngif="isLoading" class="loading">Загрузка продуктов...</div>
+
+      <!-- Список продуктов -->
+      <div *ngif="!isLoading" class="products">
+        <div *ngfor="let product of products" class="product-item">
+          <h3>{{ product.name }}</h3>
+          <p>Цена: {{ product.price }} руб.</p>
+          <p *ngif="product.category">Категория: {{ product.category }}</p>
+        </div>
+      </div>
+
+      <!-- Кнопка добавления -->
+      <button (click)="addProduct()">Добавить продукт</button>
+    </div>
+    <script src="/my-ts-project.8a419a5c.js"></script>
   
 
 <script src="/my-ts-project.af22b5c6.js"></script></body></html>
