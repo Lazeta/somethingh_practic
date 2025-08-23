@@ -9,9 +9,9 @@
   },
   "name": "somethings_practice",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "parcel": "parcel serve my-ts-project/index.html"
   },
   "keywords": [],
   "author": "",
