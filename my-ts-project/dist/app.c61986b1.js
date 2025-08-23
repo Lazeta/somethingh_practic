@@ -118,13 +118,29 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"app.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 var user = {
   name: "Иван",
-  age: 25,
+  email: "a@b.com",
   id: 7
 };
+function greetUser(user) {
+  return "Hello, ".concat(user.name, "! + ").concat(user.email);
+}
+console.log(greetUser(user));
 console.log("User:", user);
 document.getElementById("app").innerHTML = "\n    <h2>".concat(user.name, "</h2>\n    <p>\u0412\u043E\u0437\u0440\u0430\u0441\u0442: ").concat(user.age, "</p>\n");
+var config = {
+  apiUrl: "https://api.example.com",
+  version: "1.0.0",
+  timeout: 5000
+};
+config.timeout = 10000;
+console.log(config);
 },{}],"../../../../Users/Zam/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -150,7 +166,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56247" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59139" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
