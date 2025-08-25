@@ -61,14 +61,12 @@ interface Employee {
 }
 // Пересечение двух интерфейсов
 type EmployeePerson = Person & Employee;
-
 const john: EmployeePerson = {
     name: "John",
     age: 30,
     employeeId: "123",
     department: "Sales"
 }
-
 // С примитивными типами (редко используется)
 type Never = string & number; // type Never = never (невозможный тип)
 
@@ -77,6 +75,18 @@ type Never = string & number; // type Never = never (невозможный ти
 // _____________________________________
 // Literal Types (Литеральные типы)
 // Синтаксис: конкретное_значение
+type UserRole = "admin" | "user" | "guest";
+type StatusCode = 200 | 404 | 500;
+function logValue<T extends string>(value: T){
+    console.log(value);
+}
+logValue("123"); // OK
+// logValue(123); // ERROR, а если было extends number, то было бы OK
+// ✅ Явно указываем тип
+const role: UserRole = "admin";
+logValue(role); // T = "admin" (подтип string)
+// ✅ Или так
+logValue("admin" as UserRole); // T = UserRole
 
 
 
@@ -84,6 +94,12 @@ type Never = string & number; // type Never = never (невозможный ти
 // _____________________________________
 // Type Aliases (Псевдонимы)
 // Синтаксис: type имя_псевдонима = тип
+type UserType = {
+    id: number;
+    name: string;
+}
+type StringOrNumber = string | number;
+type AdminUser = UserType & { permissions: string[] }
 
 
 
@@ -97,3 +113,18 @@ printId2(["123", 123, "base64"]); // отрабатывает любой вар�
 // пояснение:
 // T extends number | string - значит, что T должен быть совместим с типом number | string, либо их подтипом
 // T[] - значит, что T может быть массивом, id ожидает массив с типом T
+
+
+
+
+// _____________________________________
+// generic types
+let unknownValue: unknown = "hellossssss";
+
+// Требует проверки типа перед использованием
+if (typeof unknownValue === "string") {
+    console.log(unknownValue.toUpperCase()); // OK
+}
+
+// unknownValue.toUpperCase(); // Error без проверки
+console.log(unknownValue); // но консоль выводит и без проверки также
