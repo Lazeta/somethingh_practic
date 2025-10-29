@@ -354,3 +354,4 @@
 // console.log(`${user}`); // Вызов с hint='string' -> "Alice"
 // console.log(user + ""); // Вызов с hint='default' -> "Alice (30)"
 // console.log(user.toString()); // "[object Object]"
+
