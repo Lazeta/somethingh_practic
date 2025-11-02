@@ -8,6 +8,7 @@ graph.d = ["f"];
 graph.e = ["f"];
 graph.f = ["g"];
 
+// Поиск в ширину в графе
 function searchInWidth(graph, start, end) {
   let queue = [];
   queue.push(start)
